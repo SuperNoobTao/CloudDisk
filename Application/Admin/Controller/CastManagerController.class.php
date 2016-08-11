@@ -104,6 +104,7 @@ class CastManagerController extends BaseController
         {$this->error('请输入分享码',U('castlist'));;
         }
 
+
         $file=D('file');//利用与表file对应的数据模型类FileModel来建立数据对象。
         $result= $file->where($share)->find();//根据分享码查询到文件信息
 
