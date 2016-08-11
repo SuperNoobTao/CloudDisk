@@ -9,8 +9,10 @@ class PublicController extends Controller {
         else{
             if($_SERVER['REQUEST_METHOD']=='POST') {
                 //提交登陆数据
+
                 $data['username'] = I('post.username');
                 $data['password'] = I('post.password');
+
                 $user = M('user')->where($data)->find();
                 if ($user==null) {
                     $this->error('用户不存在或者密码错误');

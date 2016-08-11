@@ -56,12 +56,12 @@ class CastManagerController extends BaseController
 
         $id=$_GET['id'];//GET方式传到此方法中的参数id,即文件在数据库里的保存id.根据之查找文件信息。
         if($id=='') //如果id为空而出错时，程序跳转到项目的Index/index页面。或可做其他处理。
-        {$this->redirect('index','Index',",APP_NAME,",1);
+        {$this->error('id为空',U('castlist'));
         }
         $file=D('file');//利用与表file对应的数据模型类FileModel来建立数据对象。
         $result= $file->find($id);//根据id查询到文件信息
         if($result==false) //如果查询不到文件信息而出错时，程序跳转到项目的Index/index页面。或可做其他处理
-        {$this->redirect('index','Index',",APP_NAME,",1);
+        {$this->error('查询不到文件信息',U('castlist'));
         }
         $path=$file->path;//文件保存名
         $filename=$file->filename;//文件原名
@@ -98,15 +98,17 @@ class CastManagerController extends BaseController
     public function downloadforshare()
     {
         $uploadpath='./Public/Home/';//设置文件上传路径，服务器上的绝对路径
-
-        $share['share']=$_POST['share'];//POST方式传到此方法中的参数share,即文件在数据库里保存的share.根据之查找文件信息。
-        if($share=='') //如果id为空而出错时，程序跳转到项目的Index/index页面。或可做其他处理。
-        {$this->redirect('index','Index',",APP_NAME,",1);
+        $share['share'] = I('post.share');
+       //POST方式传到此方法中的参数share,即文件在数据库里保存的share.根据之查找文件信息。
+        if($share['share']=='') //如果id为空而出错时，程序跳转到项目的Index/index页面。或可做其他处理。
+        {$this->error('请输入分享码',U('castlist'));;
         }
+
         $file=D('file');//利用与表file对应的数据模型类FileModel来建立数据对象。
-        $result= $file->find($share);//根据分享码查询到文件信息
+        $result= $file->where($share)->find();//根据分享码查询到文件信息
+
         if($result==false) //如果查询不到文件信息而出错时，程序跳转到项目的Index/index页面。或可做其他处理
-        {$this->redirect('index','Index',",APP_NAME,",1);
+        {$this->error('查询不到文件信息',U('castlist'));;
         }
         $path=$file->path;//文件保存名
         $filename=$file->filename;//文件原名

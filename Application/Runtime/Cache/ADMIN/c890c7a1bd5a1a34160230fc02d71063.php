@@ -9,11 +9,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp" />
-    <link rel="icon" type="image/png" href="/yun/Public/Admin/i/favicon.png">
-    <link rel="apple-touch-icon-precomposed" href="/yun/Public/Admin/i/app-icon72x72@2x.png">
+    <link rel="icon" type="image/png" href="/CloudDisk/Public/Admin/i/favicon.png">
+    <link rel="apple-touch-icon-precomposed" href="/CloudDisk/Public/Admin/i/app-icon72x72@2x.png">
     <meta name="apple-mobile-web-app-title" content="Amaze UI" />
-    <link rel="stylesheet" href="/yun/Public/Admin/css/amazeui.min.css"/>
-    <link rel="stylesheet" href="/yun/Public/Admin/css/admin.css">
+    <link rel="stylesheet" href="/CloudDisk/Public/Admin/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="/CloudDisk/Public/Admin/css/admin.css">
 </head>
 
 
@@ -55,12 +55,12 @@
         <div class="am-offcanvas-bar admin-offcanvas-bar">
             <ul class="am-list admin-sidebar-list">
                 <li><a href="<?php echo U('Index/index');?>"><span class="am-icon-home"></span> 首页</a></li>
-                <li><a href=""><span class="am-icon-home"></span> 代理商管理</a></li>
+                <li><a href=""><span class="am-icon-home"></span> XXXX</a></li>
                 <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 客户案例管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 文件管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-                        <li><a href="<?php echo U('CastManager/add') ;?>"><span class="am-icon-bug"></span> 新增案例</a></li>
-                        <li><a href="<?php echo U('CastManager/castlist') ;?>"><span class="am-icon-bug"></span> 案例列表</a></li>
+                        <li><a href="<?php echo U('CastManager/add') ;?>"><span class="am-icon-bug"></span> 上传文件</a></li>
+                        <li><a href="<?php echo U('CastManager/castlist') ;?>"><span class="am-icon-bug"></span> 文件列表</a></li>
                     </ul>
                 </li>
 
@@ -167,13 +167,13 @@
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="/yun/Public/Admin/js/amazeui.ie8polyfill.min.js"></script>
+<script src="/CloudDisk/Public/Admin/js/amazeui.ie8polyfill.min.js"></script>
 <![endif]-->
 
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="/yun/Public/Admin/js/jquery.min.js"></script>
+<script src="/CloudDisk/Public/Admin/js/jquery.min.js"></script>
 <!--<![endif]-->
-<script src="/yun/Public/Admin/js/amazeui.min.js"></script>
-<script src="/yun/Public/Admin/js/app.js"></script>
+<script src="/CloudDisk/Public/Admin/js/amazeui.min.js"></script>
+<script src="/CloudDisk/Public/Admin/js/app.js"></script>
 </body>
 </html>

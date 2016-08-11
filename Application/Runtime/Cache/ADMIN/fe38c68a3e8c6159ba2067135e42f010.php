@@ -112,9 +112,10 @@
 		<form class="am-form" method="post" action="<?php echo U('CastManager/downloadforshare') ;?>">
 		<div class="am-u-sm-12 am-u-md-3">
 			<div class="am-input-group am-input-group-sm">
-				<input type="text" id="share" name="share" class="am-form-field" placeholder="请输入分享码">
+				<input type="text" name="share" class="am-form-field" placeholder="请输入分享码">
 				<span class="am-input-group-btn">
-            <input type="submit" class="am-btn am-btn-default" type="button"  >下载</input>
+            <input type="submit" class="am-btn am-btn-default" type="button" value="下载" >
+
           </span>
 			</div>
 		</div>
