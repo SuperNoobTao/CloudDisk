@@ -55,12 +55,12 @@
         <div class="am-offcanvas-bar admin-offcanvas-bar">
             <ul class="am-list admin-sidebar-list">
                 <li><a href="<?php echo U('Index/index');?>"><span class="am-icon-home"></span> 首页</a></li>
-                <li><a href=""><span class="am-icon-home"></span> 代理商管理</a></li>
+                <li><a href=""><span class="am-icon-home"></span> XXXX</a></li>
                 <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 客户案例管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 文件管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-                        <li><a href="<?php echo U('CastManager/add') ;?>"><span class="am-icon-bug"></span> 新增案例</a></li>
-                        <li><a href="<?php echo U('CastManager/castlist') ;?>"><span class="am-icon-bug"></span> 案例列表</a></li>
+                        <li><a href="<?php echo U('CastManager/add') ;?>"><span class="am-icon-bug"></span> 上传文件</a></li>
+                        <li><a href="<?php echo U('CastManager/castlist') ;?>"><span class="am-icon-bug"></span> 文件列表</a></li>
                     </ul>
                 </li>
 
@@ -90,39 +90,66 @@
     <!-- content start -->
     <div class="admin-content">
 
+	<hr>
+	<div class="am-g">
+		<div class="am-u-sm-12 am-u-md-6">
+			<div class="am-btn-toolbar">
+				<div class="am-btn-group am-btn-group-xs">
+					<button type="button" class="am-btn am-btn-default"><span class="am-icon-plus"></span> 新增</button>
+					<button type="button" class="am-btn am-btn-default"><span class="am-icon-save"></span> 保存</button>
+					<button type="button" class="am-btn am-btn-default"><span class="am-icon-archive"></span> 审核</button>
+					<button type="button" class="am-btn am-btn-default"><span class="am-icon-trash-o"></span> 删除</button>
+				</div>
+			</div>
+		</div>
+		<div class="am-u-sm-12 am-u-md-3">
+			<div class="am-form-group">
+				<select data-am-selected="{btnSize: 'sm'}">
+
+				</select>
+			</div>
+		</div>
+		<form class="am-form" method="post" action="<?php echo U('CastManager/downloadforshare') ;?>">
+		<div class="am-u-sm-12 am-u-md-3">
+			<div class="am-input-group am-input-group-sm">
+				<input type="text" id="share" name="share" class="am-form-field" placeholder="请输入分享码">
+				<span class="am-input-group-btn">
+            <input type="submit" class="am-btn am-btn-default" type="button"  >下载</input>
+          </span>
+			</div>
+		</div>
+		</form>
+	</div>
+
+
 	<form class="am-form">
 		<table class="am-table am-table-striped am-table-hover table-main">
 			<thead>
 				<tr>
 					<th class="table-check"><input type="checkbox"></th>
-					<th class="table-id">ID</th>
-					<th class="table-title">站点名称</th>
-					<th class="table-type">站点网址</th>
-					<th class="table-author am-hide-sm-only">站点图片</th>
-					<th class="table-date am-hide-sm-only">站点状态</th>
+					<th class="table-title">文件名</th>
+					<th class="table-type">上传时间</th>
+					<th class="table-author am-hide-sm-only">大小</th>
 					<th class="table-set">操作</th>
 				</tr>
 			</thead>
 			<tbody>
 				<?php if(is_array($castinfo)): $i = 0; $__LIST__ = $castinfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i;?><tr>
 						<td><input type="checkbox"></td>
-						<td><?php echo $vo['id'] ;?></td>
+
 						<td>
-							<?php echo $vo['sitename'] ;?>
+							<?php echo $vo['filename'] ;?>
 						</td>
 						<td>
-							<a href="<?php echo $vo[siteurl] ;?>"><?php echo $vo['siteurl'] ;?></a>
+							<?php echo $vo['uploadtime'] ;?>
 						</td>
-						<td class="am-hide-sm-only"> <img src="/CloudDisk/Public/Home/<?php echo $vo['siteimg'];?>" style="height: 30px;" /></td>
-						<td class="am-hide-sm-only"><?php echo checkStatus($vo['status']) ;?></td>
+						<td class="am-hide-sm-only"><?php echo format_bytes($vo['size']) ;?></td>
+
 						<td>
 							<div class="am-btn-toolbar">
 								<div class="am-btn-group am-btn-group-xs">
-									<button class="am-btn am-btn-default am-btn-xs am-text-secondary"><span class="am-icon-pencil-square-o"></span> 编辑</button>
-									<?php if($vo['status'] == 1): ?><button class="am-btn am-btn-default am-btn-xs am-hide-sm-only" onclick="location.href='<?php echo U('changeStatus',array('id'=>$vo['id'],'status'=>$vo['status'])) ;?>';return false;"><span class="am-icon-copy"></span> 启用</button>
-										<?php else: ?>
-										<button class="am-btn am-btn-default am-btn-xs am-hide-sm-only" onclick="location.href='<?php echo U('changeStatus',array('id'=>$vo['id'],'status'=>$vo['status'])) ;?>';return false;"><span class="am-icon-copy"></span> 禁用</button><?php endif; ?>
-									<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><span class="am-icon-trash-o"></span> 删除</button>
+									<button class="am-btn am-btn-default am-btn-xs am-text-secondary"><a href='/CloudDisk/index.php/Admin/CastManager/download/id/<?php echo $vo['id'] ;?> '>下载</a></button>
+									<button class="am-btn am-btn-default am-btn-xs am-text-danger am-hide-sm-only"><a href='/CloudDisk/index.php/Admin/CastManager/share/id/<?php echo $vo['id'] ;?> '> 分享</a></button>
 								</div>
 							</div>
 						</td>

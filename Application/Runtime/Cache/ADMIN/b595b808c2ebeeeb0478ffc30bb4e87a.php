@@ -55,12 +55,12 @@
         <div class="am-offcanvas-bar admin-offcanvas-bar">
             <ul class="am-list admin-sidebar-list">
                 <li><a href="<?php echo U('Index/index');?>"><span class="am-icon-home"></span> 首页</a></li>
-                <li><a href=""><span class="am-icon-home"></span> 代理商管理</a></li>
+                <li><a href=""><span class="am-icon-home"></span> XXXX</a></li>
                 <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 客户案例管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 文件管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-                        <li><a href="<?php echo U('CastManager/add') ;?>"><span class="am-icon-bug"></span> 新增案例</a></li>
-                        <li><a href="<?php echo U('CastManager/castlist') ;?>"><span class="am-icon-bug"></span> 案例列表</a></li>
+                        <li><a href="<?php echo U('CastManager/add') ;?>"><span class="am-icon-bug"></span> 上传文件</a></li>
+                        <li><a href="<?php echo U('CastManager/castlist') ;?>"><span class="am-icon-bug"></span> 文件列表</a></li>
                     </ul>
                 </li>
 

@@ -55,12 +55,12 @@
         <div class="am-offcanvas-bar admin-offcanvas-bar">
             <ul class="am-list admin-sidebar-list">
                 <li><a href="<?php echo U('Index/index');?>"><span class="am-icon-home"></span> 首页</a></li>
-                <li><a href=""><span class="am-icon-home"></span> 代理商管理</a></li>
+                <li><a href=""><span class="am-icon-home"></span> XXXX</a></li>
                 <li class="admin-parent">
-                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 客户案例管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
+                    <a class="am-cf" data-am-collapse="{target: '#collapse-nav'}"><span class="am-icon-file"></span> 文件管理 <span class="am-icon-angle-right am-fr am-margin-right"></span></a>
                     <ul class="am-list am-collapse admin-sidebar-sub am-in" id="collapse-nav">
-                        <li><a href="<?php echo U('CastManager/add') ;?>"><span class="am-icon-bug"></span> 新增案例</a></li>
-                        <li><a href="<?php echo U('CastManager/castlist') ;?>"><span class="am-icon-bug"></span> 案例列表</a></li>
+                        <li><a href="<?php echo U('CastManager/add') ;?>"><span class="am-icon-bug"></span> 上传文件</a></li>
+                        <li><a href="<?php echo U('CastManager/castlist') ;?>"><span class="am-icon-bug"></span> 文件列表</a></li>
                     </ul>
                 </li>
 
@@ -91,55 +91,28 @@
     <div class="admin-content">
 
 	<div class="am-cf am-padding am-padding-bottom-0">
-		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">客户案例管理</strong> / <small>新增</small></div>
+		<div class="am-fl am-cf"><strong class="am-text-primary am-text-lg">文件管理</strong> / <small>新增</small></div>
 	</div>
 
 	<hr>
 
 	<form class="am-form" method="post" action="<?php echo U('CastManager/add') ;?>" enctype="multipart/form-data" >
-		<div class="am-g am-margin-top">
-			<div class="am-u-sm-4 am-u-md-2 am-text-right">
-				站点名称
-			</div>
-			<div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
-				<input type="text" name="sitename" class="am-input-sm">
-			</div>
-		</div>
+
 
 		<div class="am-g am-margin-top">
 			<div class="am-u-sm-4 am-u-md-2 am-text-right">
-				站点地址
-			</div>
-			<div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
-				<input type="text" name="siteurl" class="am-input-sm">
-			</div>
-		</div>
-
-		<div class="am-g am-margin-top">
-			<div class="am-u-sm-4 am-u-md-2 am-text-right">
-				站点图片
+				选择文件
 			</div>
 			<div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
 				<input type="file" name="siteimg" id="doc-ipt-file-1">
 			</div>
 		</div>
 
-		<div class="am-g am-margin-top">
-			<div class="am-u-sm-4 am-u-md-2 am-text-right">
-				状态
-			</div>
-			<div class="am-u-sm-8 am-u-md-4 am-u-end col-end">
-				<select data-am-selected="{btnSize: 'sm'}" name="status" style="display: none;">
-					<option value="1">启用</option>
-					<option value="0">禁用</option>
-				</select>
-			</div>
-			<div class="am-hide-sm-only am-u-md-6">*必填</div>
-		</div>
+
 
 		<div class="am-g am-margin-top">
 			<div class="am-u-sm-8 am-u-sm-offset-2">
-				<button type="submit" class="am-btn am-btn-primary">保存修改</button>
+				<button type="submit" class="am-btn am-btn-primary">确认提交</button>
 			</div>
 		</div>
 	</form>

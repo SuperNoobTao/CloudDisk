@@ -5,7 +5,7 @@ class CastManagerController extends BaseController
 {
     public function castlist()
     {
-        $castinfo = M('cast')->select();
+        $castinfo = M('file')->select();
         $this->assign('castinfo', $castinfo);
 
         $this->display();
@@ -13,7 +13,7 @@ class CastManagerController extends BaseController
 
     public function add()
     {
-        //新增案例
+        //新增资源
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $data=$_POST;
             $upload=new \Think\Upload();
@@ -29,8 +29,11 @@ class CastManagerController extends BaseController
                 $this->error($upload->getError());
             }else{// 上传成功
                 dump($info);
-                $data['siteimg']='images/'.$info['siteimg']['savepath'].$info['siteimg']['savename'];
-                $save=M('cast')->add($data);
+                $data['path']='images/'.$info['siteimg']['savepath'].$info['siteimg']['savename'];
+                $data['filename']=$info['siteimg']['savename'];
+                $data['size']=$info['siteimg']['size'];
+                $data['uploadtime'] = date('Y-m-d H:i:s',time());
+                $save=M('file')->add($data);
                 if($save){
                     $this->success('添加成功',U('castlist'));
                 }
@@ -43,31 +46,78 @@ class CastManagerController extends BaseController
         }
     }
 
-    public function changeStatus()
-    {
-        $id['id']=I('get.id');
-        $castmes=M('cast')->where($id)->find();
-        if ($castmes) {
-            //存在记录
-            if ($castmes['status'] == 1) {
-                $save['status'] = 0;
-                $mess="禁用成功";
-            } else {
-                $save['status'] = 1;
-                $mess="启用成功";
-            }
-            $saveresult=M('cast')->where($id)->save($save);
-            if ($saveresult) {
-                $this->success($mess,U('castlist'));
-            }else{
-                $this->error('修改状态失败');
-            }
-        }else{
-            $this->error('该记录不存在，请刷新重试');
-        }
 
+
+   /**
+    *下载资源
+    **/
+    public function download(){
+        $uploadpath='./Public/Home/';//设置文件上传路径，服务器上的绝对路径
+
+        $id=$_GET['id'];//GET方式传到此方法中的参数id,即文件在数据库里的保存id.根据之查找文件信息。
+        if($id=='') //如果id为空而出错时，程序跳转到项目的Index/index页面。或可做其他处理。
+        {$this->redirect('index','Index',",APP_NAME,",1);
+        }
+        $file=D('file');//利用与表file对应的数据模型类FileModel来建立数据对象。
+        $result= $file->find($id);//根据id查询到文件信息
+        if($result==false) //如果查询不到文件信息而出错时，程序跳转到项目的Index/index页面。或可做其他处理
+        {$this->redirect('index','Index',",APP_NAME,",1);
+        }
+        $path=$file->path;//文件保存名
+        $filename=$file->filename;//文件原名
+        $totalPath=$uploadpath.$path;//完整文件名（路径加名字）
+        $http = new \Org\Net\Http;
+        $http->download($totalPath, $filename);
 
     }
+
+
+    /**
+     * 获取一个资源的分享码 持续5秒
+     * */
+    public function share()
+    {
+        $id['id']=$_GET['id'];//GET方式传到此方法中的参数id,即文件在数据库里的保存id.根据之查找文件信息。
+        $share = random(6,string,0);
+
+        $filemes=M('file')->where($id)->find();
+        if ($filemes) {
+            $save[share]=$share;
+        }else{
+            $this->error('没有此文件',U('castlist'));
+        }
+        M('file')->where($id)->save($save);
+        $this->success('分享码:'.$share,U('castlist'),5);
+    }
+
+
+    /**
+     *根据分享码下载资源
+     *
+     * */
+    public function downloadforshare()
+    {
+        $uploadpath='./Public/Home/';//设置文件上传路径，服务器上的绝对路径
+
+        $share['share']=$_POST['share'];//POST方式传到此方法中的参数share,即文件在数据库里保存的share.根据之查找文件信息。
+        if($share=='') //如果id为空而出错时，程序跳转到项目的Index/index页面。或可做其他处理。
+        {$this->redirect('index','Index',",APP_NAME,",1);
+        }
+        $file=D('file');//利用与表file对应的数据模型类FileModel来建立数据对象。
+        $result= $file->find($share);//根据分享码查询到文件信息
+        if($result==false) //如果查询不到文件信息而出错时，程序跳转到项目的Index/index页面。或可做其他处理
+        {$this->redirect('index','Index',",APP_NAME,",1);
+        }
+        $path=$file->path;//文件保存名
+        $filename=$file->filename;//文件原名
+        $totalPath=$uploadpath.$path;//完整文件名（路径加名字）
+        $http = new \Org\Net\Http;
+        $http->download($totalPath, $filename);
+    }
+
+
+
+
 
 
 

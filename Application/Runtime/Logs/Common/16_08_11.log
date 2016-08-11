@@ -1,0 +1,24 @@
+[ 2016-08-11T11:08:43+08:00 ] ::1 /CloudDisk/index.php/File/download/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000690s ]
+ERR: 无法加载模块:File
+
+[ 2016-08-11T11:15:17+08:00 ] ::1 /CloudDisk/index.php/CastManager/download/id/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000059s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+ERR: 无法加载模块:CastManager
+
+[ 2016-08-11T11:16:38+08:00 ] ::1 /CloudDisk/Public/Home/video/video2.mp4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000825s ]
+ERR: 无法加载模块:Public
+
+[ 2016-08-11T11:16:38+08:00 ] ::1 /CloudDisk/Public/Home/video/video1.mp4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000051s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001074s ]
+ERR: 无法加载模块:Public
+
