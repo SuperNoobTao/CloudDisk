@@ -24,8 +24,8 @@
                 <li><a href="<?php echo U('Signup/index');?>">合作</a></li>
                 <li><a href="<?php echo U('Products/pricing');?>">定制</a></li>
                 <li><a href="<?php echo U('About/index');?>">关于</a></li>
-                <li><button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button></li>
-                <li><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button></li>
+                <li><button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"> 注册</button></li>
+                <li><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"> 登录</button></li>
             </ul>
         </div>
     </div>
@@ -67,8 +67,9 @@
                     <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button>
                 </div>
                 <div class="am-topbar-right">
-                    <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button>
+                    <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="window.location.href='<?php echo U('Admin/Public/login');?>'"><span class="am-icon-user"></span> 登录</button>
                 </div>
+
             </ul>
         </div>
     </div>

@@ -2,15 +2,15 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>云适配</title>
+    <title>xxx</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <link rel="alternate icon" type="image/png" href="/yun/Public/Home/i/favicon.png">
-    <link rel="stylesheet" href="/yun/Public/Home/css/amazeui.min.css"/>
-    <link rel="stylesheet" href="/yun/Public/Home/css/app.css"/>
+    <link rel="alternate icon" type="image/png" href="/CloudDisk/Public/Home/i/favicon.png">
+    <link rel="stylesheet" href="/CloudDisk/Public/Home/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="/CloudDisk/Public/Home/css/app.css"/>
 </head>
 <body>
 <!-- 手机版侧滑菜单 -->
@@ -24,8 +24,8 @@
                 <li><a href="<?php echo U('Signup/index');?>">合作</a></li>
                 <li><a href="<?php echo U('Products/pricing');?>">定制</a></li>
                 <li><a href="<?php echo U('About/index');?>">关于</a></li>
-                <li><button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button></li>
-                <li><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button></li>
+                <li><button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"> 注册</button></li>
+                <li><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"> 登录</button></li>
             </ul>
         </div>
     </div>
@@ -35,7 +35,7 @@
 <header class="am-topbar am-topbar-fixed-top">
     <div class="am-container">
         <h1 class="am-topbar-brand">
-            <a href="#"><img src="/yun/Public/Home/images/logo.png" /></a>
+            <a href="#"><img src="/CloudDisk/Public/Home/images/logo.png" /></a>
         </h1>
         <button class="am-btn am-btn-primary am-show-sm-only nav-push-btn am-topbar-toggle " data-am-offcanvas="{target: '#navPush', effect: 'push'}">
             <span class="am-sr-only">导航切换</span>
@@ -67,8 +67,9 @@
                     <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button>
                 </div>
                 <div class="am-topbar-right">
-                    <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button>
+                    <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="window.location.href='<?php echo U('Admin/Public/login');?>'"><span class="am-icon-user"></span> 登录</button>
                 </div>
+
             </ul>
         </div>
     </div>
@@ -90,22 +91,22 @@
   <div class="am-container">
     <h2>成为云适配代理商，您还可以获得以下帮助</h2>
     <div class="am-u-md-3 am-u-sm-12 coo-help-item">
-      <img src="/yun/Public/Home/images/coo-help-1.png"/>
+      <img src="/CloudDisk/Public/Home/images/coo-help-1.png"/>
       <h5>跨平台适配专家</h5>
       <p>一行代码帮助企业快速创建跨屏网站，适配包括各种智能手机、平板电脑及多种移动终端设备，令企业的PC网站与移动端网站域名不变，内容实时同步更新，企业无任何维护成本。</p>
     </div>
     <div class="am-u-md-3 am-u-sm-12 coo-help-item">
-      <img src="/yun/Public/Home/images/coo-help-2.png"/>
+      <img src="/CloudDisk/Public/Home/images/coo-help-2.png"/>
       <h5>助力企业移动营销</h5>
       <p>云适配为您的客户量身打造不同访问设备的适配解决方案，助力企业快速打通微信、微博、APP、二维码、短信等移动营销入口，更有一键拨叫、社区分享、地图导航、CDN加速、数据分析等增值功能供您选择。</p>
     </div>
     <div class="am-u-md-3 am-u-sm-12 coo-help-item">
-      <img src="/yun/Public/Home/images/coo-help-3.png"/>
+      <img src="/CloudDisk/Public/Home/images/coo-help-3.png"/>
       <h5>强有力的渠道代理政策</h5>
       <p>每个城市我们选择有限数量的渠道代理商长期合作，成为云适配代理商，享受丰厚的代理商折扣和返利以及不断增加的增值服务，并长期享受利润分成，让您和云适配共同成长。</p>
     </div>
     <div class="am-u-md-3 am-u-sm-12 coo-help-item">
-      <img src="/yun/Public/Home/images/coo-help-4.png"/>
+      <img src="/CloudDisk/Public/Home/images/coo-help-4.png"/>
       <h5>成熟的代理商支持体系</h5>
       <p>协助代理商建立自己的技术和销售团队，并给予代理商销售、技术、设计各方面的指导和帮助，以及大客户案例的实时更新，代理商大客户的协助销售计划、会销支持，以及代理商区域客户的分单支持。</p>
     </div>
@@ -182,7 +183,7 @@
     <div class="weixin-inner">
         <a class="weixin-close"><i class="am-icon-times-circle"></i></a>
         <div class="qrcode-weixin">
-            <img src="/yun/Public/Home/images/manager-qrcode.jpg" alt="">
+            <img src="/CloudDisk/Public/Home/images/manager-qrcode.jpg" alt="">
         </div>
         <div class="weixin-info">扫描二维码，咨询云适配代理合作</div>
     </div>
@@ -193,7 +194,7 @@
 <footer>
     <div class="am-container">
         <div class="footer-logo">
-            <img src="/yun/Public/Home/images/logo-colorful.png" />
+            <img src="/CloudDisk/Public/Home/images/logo-colorful.png" />
         </div>
         <ul class="social-links-list">
             <li>
@@ -255,7 +256,7 @@
     <div class="weixin-inner">
         <a class="weixin-close"><i class="am-icon-times-circle"></i></a>
         <div class="qrcode-weixin">
-            <img src="/yun/Public/Home/images/qrcode-weixin.jpg" alt="">
+            <img src="/CloudDisk/Public/Home/images/qrcode-weixin.jpg" alt="">
         </div>
         <div class="weixin-info">在微信上关注我们</div>
     </div>
@@ -264,14 +265,14 @@
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="/yun/Public/Home/js/polyfill/rem.min.js"></script>
-<script src="/yun/Public/Home/js/polyfill/respond.min.js"></script>
-<script src="/yun/Public/Home/js/amazeui.legacy.js"></script>
+<script src="/CloudDisk/Public/Home/js/polyfill/rem.min.js"></script>
+<script src="/CloudDisk/Public/Home/js/polyfill/respond.min.js"></script>
+<script src="/CloudDisk/Public/Home/js/amazeui.legacy.js"></script>
 <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="/yun/Public/Home/js/jquery.min.js"></script>
-<script src="/yun/Public/Home/js/amazeui.min.js"></script>
-<script src="/yun/Public/Home/js/app.js"></script>
+<script src="/CloudDisk/Public/Home/js/jquery.min.js"></script>
+<script src="/CloudDisk/Public/Home/js/amazeui.min.js"></script>
+<script src="/CloudDisk/Public/Home/js/app.js"></script>
 <!--<![endif]-->
 
 </html>

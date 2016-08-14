@@ -2,15 +2,15 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>云适配</title>
+    <title>xxx</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="format-detection" content="telephone=no">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-siteapp"/>
-    <link rel="alternate icon" type="image/png" href="/yun/Public/Home/i/favicon.png">
-    <link rel="stylesheet" href="/yun/Public/Home/css/amazeui.min.css"/>
-    <link rel="stylesheet" href="/yun/Public/Home/css/app.css"/>
+    <link rel="alternate icon" type="image/png" href="/CloudDisk/Public/Home/i/favicon.png">
+    <link rel="stylesheet" href="/CloudDisk/Public/Home/css/amazeui.min.css"/>
+    <link rel="stylesheet" href="/CloudDisk/Public/Home/css/app.css"/>
 </head>
 <body>
 <!-- 手机版侧滑菜单 -->
@@ -24,8 +24,8 @@
                 <li><a href="<?php echo U('Signup/index');?>">合作</a></li>
                 <li><a href="<?php echo U('Products/pricing');?>">定制</a></li>
                 <li><a href="<?php echo U('About/index');?>">关于</a></li>
-                <li><button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button></li>
-                <li><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button></li>
+                <li><button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"> 注册</button></li>
+                <li><button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"> 登录</button></li>
             </ul>
         </div>
     </div>
@@ -35,7 +35,7 @@
 <header class="am-topbar am-topbar-fixed-top">
     <div class="am-container">
         <h1 class="am-topbar-brand">
-            <a href="#"><img src="/yun/Public/Home/images/logo.png" /></a>
+            <a href="#"><img src="/CloudDisk/Public/Home/images/logo.png" /></a>
         </h1>
         <button class="am-btn am-btn-primary am-show-sm-only nav-push-btn am-topbar-toggle " data-am-offcanvas="{target: '#navPush', effect: 'push'}">
             <span class="am-sr-only">导航切换</span>
@@ -67,8 +67,9 @@
                     <button class="am-btn am-btn-secondary am-topbar-btn am-btn-sm"><span class="am-icon-pencil"></span> 注册</button>
                 </div>
                 <div class="am-topbar-right">
-                    <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><span class="am-icon-user"></span> 登录</button>
+                    <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm" onclick="window.location.href='<?php echo U('Admin/Public/login');?>'"><span class="am-icon-user"></span> 登录</button>
                 </div>
+
             </ul>
         </div>
     </div>
@@ -101,13 +102,13 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <h2>所见即所得IDE工具，超强个性化订制</h2>
-            <img src="/yun/Public/Home/images/products/manage_src_1.png" />
+            <img src="/CloudDisk/Public/Home/images/products/manage_src_1.png" />
           </div>
         </div>
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-1-1.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-1-1.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>简单、易用</h5>
@@ -118,7 +119,7 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-1-2.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-1-2.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>可视化操作</h5>
@@ -129,7 +130,7 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-1-3.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-1-3.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>多层级</h5>
@@ -140,7 +141,7 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-1-4.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-1-4.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>多设备同步编辑预览</h5>
@@ -153,13 +154,13 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <h2>清晰、完善的服务管理后台</h2>
-            <img src="/yun/Public/Home/images/products/manage_src_2.png" />
+            <img src="/CloudDisk/Public/Home/images/products/manage_src_2.png" />
           </div>
         </div>
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-2-1.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-2-1.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>统计服务</h5>
@@ -170,7 +171,7 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-2-2.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-2-2.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>优先获取百度轻直达号</h5>
@@ -181,7 +182,7 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-2-3.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-2-3.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>云加速</h5>
@@ -192,7 +193,7 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-2-4.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-2-4.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               h5>快速拥有原生APP</h5>
@@ -205,13 +206,13 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <h2>Amaze UI中国首个开源HTML5跨屏前端框架</h2>
-            <img src="/yun/Public/Home/images/products/manage_src_3.png" />
+            <img src="/CloudDisk/Public/Home/images/products/manage_src_3.png" />
           </div>
         </div>
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-3-1.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-3-1.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>国内首款跨屏框架</h5>
@@ -222,7 +223,7 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-3-2.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-3-2.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>Mobile first  移动优先</h5>
@@ -233,7 +234,7 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-3-3.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-3-3.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>丰富的Web组件</h5>
@@ -244,7 +245,7 @@
         <div class="products-item-wrap">
           <div class="am-container products-item">
             <div class="am-u-md-5 sm-u-sm-12 products-pic">
-              <img src="/yun/Public/Home/images/products/product-3-4.png" alt=""/>
+              <img src="/CloudDisk/Public/Home/images/products/product-3-4.png" alt=""/>
             </div>
             <div class="am-u-md-6 am-u-sm-12 products-text">
               <h5>定制自己的框架代码</h5>
@@ -262,7 +263,7 @@
 <footer>
     <div class="am-container">
         <div class="footer-logo">
-            <img src="/yun/Public/Home/images/logo-colorful.png" />
+            <img src="/CloudDisk/Public/Home/images/logo-colorful.png" />
         </div>
         <ul class="social-links-list">
             <li>
@@ -324,7 +325,7 @@
     <div class="weixin-inner">
         <a class="weixin-close"><i class="am-icon-times-circle"></i></a>
         <div class="qrcode-weixin">
-            <img src="/yun/Public/Home/images/qrcode-weixin.jpg" alt="">
+            <img src="/CloudDisk/Public/Home/images/qrcode-weixin.jpg" alt="">
         </div>
         <div class="weixin-info">在微信上关注我们</div>
     </div>
@@ -333,14 +334,14 @@
 <!--[if lt IE 9]>
 <script src="http://libs.baidu.com/jquery/1.11.1/jquery.min.js"></script>
 <script src="http://cdn.staticfile.org/modernizr/2.8.3/modernizr.js"></script>
-<script src="/yun/Public/Home/js/polyfill/rem.min.js"></script>
-<script src="/yun/Public/Home/js/polyfill/respond.min.js"></script>
-<script src="/yun/Public/Home/js/amazeui.legacy.js"></script>
+<script src="/CloudDisk/Public/Home/js/polyfill/rem.min.js"></script>
+<script src="/CloudDisk/Public/Home/js/polyfill/respond.min.js"></script>
+<script src="/CloudDisk/Public/Home/js/amazeui.legacy.js"></script>
 <![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!-->
-<script src="/yun/Public/Home/js/jquery.min.js"></script>
-<script src="/yun/Public/Home/js/amazeui.min.js"></script>
-<script src="/yun/Public/Home/js/app.js"></script>
+<script src="/CloudDisk/Public/Home/js/jquery.min.js"></script>
+<script src="/CloudDisk/Public/Home/js/amazeui.min.js"></script>
+<script src="/CloudDisk/Public/Home/js/app.js"></script>
 <!--<![endif]-->
 
 </html>
